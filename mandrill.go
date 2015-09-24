@@ -103,7 +103,7 @@ func do(url string, data interface{}, result interface{}) error {
 			return merr
 		} else {
 			// a return JSON was not found/parsed
-			fmt.Errorf("mandrill: unknown error happened")
+			return fmt.Errorf("mandrill: unknown error happened")
 		}
 	}
 	// no error happened
